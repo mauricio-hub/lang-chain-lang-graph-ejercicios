@@ -1,0 +1,22 @@
+# Secrets
+.env
+credentials.json
+token.json
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# PDFs
+*.pdf
+
+# Vector databases
+chroma_db/
+
+# Editor / OS
+.vscode/
+.DS_Store
