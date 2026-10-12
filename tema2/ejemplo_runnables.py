@@ -1,7 +1,8 @@
 # Importamos RunnableLambda: permite envolver funciones normales dentro de un pipeline.
 from langchain_core.runnables import RunnableLambda
 
-""" RunnableLambda son objetos que pueden invocarse mediante el metodo invoke (langchain) , son Una pieza que se puede ejecutar.
+""" RunnableLambda son objetos que pueden invocarse mediante
+el metodo invoke (langchain) , son Una pieza que se puede ejecutar.
  Recibe datos → los procesa → devuelve algo.
  Se puede encadenar con otros pasos usando |.
 ejemplo recibe un texto de entrada y hace una salida
@@ -36,7 +37,7 @@ cadena = paso1 | paso2
 
 
 # Ejecutamos toda la cadena de pasos con el valor 43
-resultado = cadena.invoke(43)
+resultado = cadena.invoke(100)
 # Flujo real:
 #   43 → paso1 → "Numero recibido: 43" → paso2 → ["Numero recibido: 43", "Numero recibido: 43"]
 

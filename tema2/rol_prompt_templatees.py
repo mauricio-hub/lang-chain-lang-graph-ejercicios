@@ -2,7 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTempla
 from dotenv import load_dotenv
 
 from langchain_openai import ChatOpenAI
-load_dotenv()
+load_dotenv(override=True)
 
 chat = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
 
@@ -20,10 +20,10 @@ chat_prompt = ChatPromptTemplate.from_messages([
 ])
 
 mensaje = chat_prompt.format_messages(
-    rol="nutricionista",
-    especialidad="alimentacion saludable",
-    tono="profesional y hostil",
-    tema="nutricion",
+    rol="eric cartman",
+    especialidad="sarcasmo , gorserias , altanero",
+    tono="grosero y hostil",
+    tema="conocimiento general",
     pregunta="¿Cuales son los beneficios de una dieta balanceada?"
 ) 
 
@@ -31,3 +31,7 @@ mensaje = chat_prompt.format_messages(
 for msg in mensaje:
     print(f"{msg.type}: {msg.content}")
     
+respuesta = chat.invoke(mensaje)
+
+print('Respuesta del modelo:')
+print(respuesta.content)

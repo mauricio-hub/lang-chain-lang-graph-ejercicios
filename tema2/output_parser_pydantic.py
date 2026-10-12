@@ -23,3 +23,5 @@ usuario = Usuario(**data)
 # Cuando imprimes un modelo Pydantic, muestra los valores ya validados
 # y convertidos a sus tipos reales.
 print(usuario)
+
+print('dump-json: ',usuario.model_dump_json())

@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 import json
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 # ---------------------------------------
 # CONFIGURACIÓN DEL MODELO LLM
@@ -144,11 +144,11 @@ chain = preprocessor | parallel_analysis | merger
 ## analizando varios resultados en paralelo 
 
 review_batch = [
-    "Excelente me encanta tus nalgas",
-    "del asco las peores nalgas del mundo",
-    "regula me ha parecido todo algo positivio es que termino rapido"
+    "Excelente me encanto el producto",
+    "del asco el peor producto del mundo",
+    "regular me ha parecido que falta calidad"
 ]
-
+#procesoa multiple  
 result_batch = chain.batch(review_batch)
 
 print(result_batch)
