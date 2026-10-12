@@ -1,7 +1,29 @@
 # Secrets
 .env
 credentials.json
+credencials.json
 token.json
+
+# Documentation
+*.md
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# PDFs
+*.pdf
+
+# Vector databases
+chroma_db/
+
+# Editor / OS
+.vscode/
+.DS_Store
 
 # Documentation
 *.md
